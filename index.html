@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Fundamentals AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#07111d;color:#eef}
+body:before{content:'';position:fixed;inset:0;background:
+radial-gradient(circle at 15% 20%,rgba(0,255,255,.12),transparent 30%),
+radial-gradient(circle at 80% 20%,rgba(0,120,255,.15),transparent 35%),
+linear-gradient(#08111d,#09192f);z-index:-1}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 60px;border-bottom:1px solid #1d355a;background:rgba(8,15,30,.8);backdrop-filter:blur(10px)}
+.logo{font-size:30px;font-weight:800;color:#5fe8ff}
+.btn{padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,#19d3ff,#217bff);color:#fff;border:0;font-weight:700;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;padding:80px 60px}
+.glass{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:24px;backdrop-filter:blur(12px);box-shadow:0 0 30px rgba(0,180,255,.08)}
+h1{font-size:58px}p{line-height:1.8;color:#cfdcf5}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:25px}
+.metric{padding:16px;background:#10203b;border-radius:14px}
+.metric b{display:block;font-size:24px;color:#5fe8ff}
+#login{display:none;position:fixed;inset:0;background:#000b;align-items:center;justify-content:center}
+input{width:100%;padding:12px;margin:8px 0;border-radius:10px;border:0}
+#app{display:none}
+.wrap{display:flex;height:100vh}
+aside{width:270px;background:#0d1728;padding:25px;border-right:1px solid #1d355a}
+aside a{display:block;color:#fff;text-decoration:none;padding:14px;border-radius:12px;background:#142644;margin:10px 0}
+main{flex:1;padding:30px;overflow:auto}
+.page{display:none}.page.active{display:block}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(320px,1fr));gap:20px}
+.stock{background:#111f37;border:1px solid #27466d;border-radius:18px;padding:20px}
+.badge{display:inline-block;padding:4px 10px;border-radius:20px;background:#1f7cff}
+.bar{height:8px;background:#233955;border-radius:8px;margin:6px 0}.fill{height:100%;background:linear-gradient(90deg,#00e5ff,#2979ff);border-radius:8px}
+table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid #284564;text-align:left}
+.small{color:#b4c6e3}
+</style></head>
+<body>
+<div id=landing>
+<header><div class=logo>THE FUNDAMENTALS AI</div><button class=btn onclick="showLogin()">LOGIN</button></header>
+<section class=hero>
+<div><h1>Institutional AI<br>Stock Research</h1><br>
+<p>The Fundamentals AI menggabungkan Bandarmology, Smart Money Flow, AI Learning, Event Based Investing, Fundamental Analysis, Technical Analysis dan konsensus berbagai analis menjadi satu dashboard.</p><br>
+<button class=btn onclick="showLogin()">Member Access</button></div>
+<div class="glass">
+<h2>AI Engine</h2><br>
+<div class=grid>
+<div class=metric><b>91</b>AI Score</div>
+<div class=metric><b>88</b>Smart Money</div>
+<div class=metric><b>84</b>Event</div>
+<div class=metric><b>90</b>Fundamental</div>
+</div></div></section></div>
+
+<div id=login><div class=glass style="width:380px">
+<h2>Member Login</h2><input id=u placeholder=Username><input id=p type=password placeholder=Password><button class=btn style="width:100%" onclick="login()">Login</button></div></div>
+
+<div id=app>
+<div class=wrap>
+<aside>
+<div class=logo style="font-size:22px">Fundamentals AI</div><br>
+<a href=# onclick="openPage('weekly')">📈 Weekly Watchlist</a>
+<a href=# onclick="openPage('broad')">🧠 AI Broad Analyst</a>
+<a href=# onclick="openPage('fund')">🏦 Fundamentals AI</a>
+</aside>
+<main>
+<section id=weekly class="page active">
+<h2>Weekly Watchlist</h2><p class=small>Watchlist mingguan berbasis Smart Money Flow, Event Catalyst, momentum teknikal dan kualitas narasi pasar.</p><br>
+<div class=cards>
+<div class=stock><span class=badge>Bullish</span><h3>FUTR</h3><div>AI Score<div class=bar><div class=fill style="width:90%"></div></div></div><p>Terpantau mengalami peningkatan volume dibanding rata-rata. Narasi digital dan potensi katalis korporasi membuat saham ini masuk prioritas minggu ini. Fokus pada keberlanjutan arus dana, bukan hanya kenaikan harga sesaat.</p></div>
+<div class=stock><span class=badge>Accumulation</span><h3>INET</h3><div>AI Score<div class=bar><div class=fill style="width:85%"></div></div></div><p>Pergerakan cenderung stabil dengan indikasi akumulasi. AI menggabungkan momentum teknikal, sentimen sektor infrastruktur digital, dan potensi event bisnis sebagai dasar pemantauan.</p></div>
+<div class=stock><span class=badge>Watch</span><h3>DOOH</h3><div>AI Score<div class=bar><div class=fill style="width:74%"></div></div></div><p>Masih berkonsolidasi. Breakout dengan volume menjadi syarat utama sebelum probabilitas bullish meningkat.</p></div>
+<div class=stock><span class=badge>Positive</span><h3>WIFI</h3><div>AI Score<div class=bar><div class=fill style="width:81%"></div></div></div><p>Dipilih karena kombinasi smart money dan momentum sektor telekomunikasi. Risiko tetap berada pada potensi distribusi setelah kenaikan cepat.</p></div>
+</div>
+</section>
+
+<section id=broad class=page>
+<h2>AI Broad Analyst Consensus</h2><p class=small>Ringkasan berbagai opini analis dan influencer menjadi satu kesimpulan AI.</p><br>
+<table><tr><th>Saham</th><th>Consensus</th><th>Kesimpulan</th></tr>
+<tr><td>JAGO</td><td>78% Bullish</td><td>Sering muncul sebagai kandidat momentum dengan perhatian tinggi pada top gainer.</td></tr>
+<tr><td>BBYB</td><td>74% Bullish</td><td>Banyak pembahasan mengenai area MA10/20 sebagai zona entry.</td></tr>
+<tr><td>MDI</td><td>76% Bullish</td><td>Trend masih sehat dan belum membentuk lower low.</td></tr>
+<tr><td>KOTA</td><td>70% Watch</td><td>Masuk berbagai watchlist dengan pola serupa.</td></tr>
+<tr><td>BRMS</td><td>73% Bullish</td><td>Sentimen emas dan komoditas menjadi pendorong utama.</td></tr>
+<tr><td>IRSX</td><td>69% Watch</td><td>Pernah memberi kenaikan dua digit sehingga kembali dipantau.</td></tr></table>
+</section>
+
+<section id=fund class=page>
+<h2>Fundamentals AI — BBRI</h2>
+<div class=glass>
+<h3>Business Overview</h3><p>BBRI merupakan salah satu bank terbesar di Indonesia dengan kekuatan utama pada pembiayaan UMKM, jaringan distribusi luas, basis nasabah besar, dan profitabilitas historis yang kuat.</p><br>
+<h3>AI Fundamental Summary</h3>
+<ul>
+<li>Model bisnis defensif dengan pangsa pasar besar.</li>
+<li>Pertumbuhan didukung transformasi digital dan kredit.</li>
+<li>Investor memantau laba, NPL, CASA, margin bunga, dan dividen.</li>
+<li>Risiko utama berasal dari perlambatan ekonomi dan kualitas kredit.</li>
+<li>Kesimpulan AI: emiten berkualitas tinggi untuk pemantauan jangka menengah-panjang dengan evaluasi berkala terhadap laporan keuangan.</li>
+</ul>
+</div>
+</section>
+</main></div></div>
+<script>
+function showLogin(){login.style.display='flex'}
+function login(){if(u.value==='presidenbakso'&&p.value==='1212'){landing.style.display='none';login.style.display='none';app.style.display='block';}else alert('Wrong credential')}
+function openPage(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active')}
+</script>
+</body></html>
